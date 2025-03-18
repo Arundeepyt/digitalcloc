@@ -1,1 +1,1 @@
-# digitalclock
+# digitalcloc
