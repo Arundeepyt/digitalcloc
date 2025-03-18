@@ -4,12 +4,12 @@ function updateClock() {
     let hours = now.getHours();
     let minutes = now.getMinutes();
     let seconds = now.getSeconds();
-    let ampm = hours >= 12 ? "PM" : "AM";
+    const ampm = hours >= 12 ? "PM" : "AM";
     
-    // 24-hour format to 12-hour format conversion
-    hours = hours % 12 || 12; 
+    // Convert 24-hour format to 12-hour format
+    hours = hours % 12 || 12;  
     
-    // Add leading zeros to minutes and seconds
+    // Add leading zeros
     minutes = minutes.toString().padStart(2, '0');
     seconds = seconds.toString().padStart(2, '0');
     
@@ -19,6 +19,6 @@ function updateClock() {
     
 // Update clock every second
 setInterval(updateClock, 1000);
-    
+
 // Initialize clock immediately
-updateClock();
+updateClock(); // Call the function once to display the time without waiting
